@@ -1,4 +1,3 @@
-# this an example for pull request
 import tkinter as tk
 from tkinter import messagebox
 from openpyxl import load_workbook, Workbook
@@ -88,7 +87,7 @@ def show_data():
             is_average_row = row[0] == "Average"
             is_pass_fail = is_remarks_col and isinstance(value, str) and value in ["Pass", "Fail"]
 
-            font_style = ("Arial", 10, "bold") if is_header or is_average_row or is_pass_fail else ("Arial", 10)
+            font_style = ("Poppins", 10, "bold") if is_header or is_average_row or is_pass_fail else ("Arial", 10)
 
             label = tk.Label(
                 data_window,
@@ -120,4 +119,5 @@ tk.Button(window, text="Submit", command=save_to_excel, width=20, bg="#C8A2C8", 
 tk.Button(window, text="View Stored Data", command=show_data, width=20, bg="#965A96", fg="white").grid(row=4, column=0, columnspan=2)
 
 window.mainloop()
+
 
